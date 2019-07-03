@@ -25,6 +25,11 @@ view: bq_zipcode_facts {
     type: string
     sql: ${TABLE}.city ;;
   }
+  
+  dimension: city_uppercase {
+    type: string
+    sql: upper(${city});;
+  }  
 
   dimension: state {
     type: string
